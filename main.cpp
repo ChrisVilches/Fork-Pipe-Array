@@ -3,10 +3,8 @@
 #include <stdio.h>
 #include <unistd.h>
 
-
 #define LECTURA 0
 #define ESCRITURA 1
-
 
 using namespace std;
 
@@ -23,12 +21,12 @@ int main(int argc, char* argv[]){
     pid = fork();
 
     if(pid == 0){
-
+        // Hijo
+    
         int tamanoArreglo;
         int* arreglo;
         int i;
-
-        // Hijo
+        
         close(padreAhijo[ESCRITURA]);   // No se necesita
         close(hijoApadre[LECTURA]);     // No se necesita
 
@@ -95,7 +93,6 @@ int main(int argc, char* argv[]){
     for(i=0; i<tamanoArreglo; i++){
         cout << "Arreglo[" << i << "] = " << arreglo[i] << endl;
     }
-
 
     return 0;
 }

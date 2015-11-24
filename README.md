@@ -1,4 +1,8 @@
 # Fork, Pipe & Array
+```
+g++ main.cpp
+./a.out
+```
 
 Programa que de manera binarizada envia un arreglo desde un proceso a otro (desde el padre al hijo).
 
